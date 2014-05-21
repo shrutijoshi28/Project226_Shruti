@@ -1,0 +1,10 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:steel;
+  background-image:url("G:\SJSU Term3\CMPE226\Final Project\Project226_Shruti\image.jpg"); 
+}
+
+a {
+  color: #110E6B;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<% include header %>
+
+<body>
+
+		<br />
+	<% include navbar %>
+	<br />
+	
+	<div class="container">
+		<div class="container">
+			<div class="col-md-4">
+    			<form action="/search" method="post" class="input-group input-group-left">
+    				<input name="searchstring" type="text" class="form-control">
+    				<input name="category" type="hidden" value="<%= header%>" >
+      				<span class="input-group-btn">
+        				<button type ="Submit" class="btn btn-default" type="button">Search</button>
+      				</span>
+      				
+    			</form><!-- /input-group -->
+  			</div><!-- /.col-lg-6 -->
+		</div>
+		<br />
+	
+					<div class="container">
+			<h2><%= header %></h2>
+			
+			<div>
+				<div class="panel panel-default">
+					<% products.forEach(function(product){ %>
+					<div class="panel-body">
+						
+						
+						<!--<a href="/product/<%=product.productid%>/info" class="text-left " >
+							<%=product.Name%></a></h4>-->
+						<h4><div class="text-left"> Category: <%=product.Category%></div></h4>
+						<div class="text-left ">Name: <%=product.Name%></div>
+						<div class="text-left ">Price: $<%=product.Price%></div>
+						<div class="text-left ">Description: <%=product.Description%></div>
+												
+						
+					</div>
+
+
+					<% }); %>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
